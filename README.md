@@ -3,7 +3,7 @@ About r-mlrmbo
 
 Home: https://github.com/mlr-org/mlrMBO
 
-Package license: BSD_2_clause
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mlrmbo-feedstock/blob/master/LICENSE.txt)
 
