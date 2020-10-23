@@ -1,4 +1,4 @@
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mlrMBO_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mlrMBO/mlrMBO_{{ version }}.tar.gz
-  sha256: 5bae1b2f0d8503699fa49c0811d3b7510aa1dcadc6cc05a0cae743b31821e900
+  sha256: 7ab9d108ad06f6c5c480fa4beca69e09ac89bb162ae6c85fe7d6d25c41f359b8
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -60,12 +60,9 @@ test:
 about:
   home: https://github.com/mlr-org/mlrMBO
   license: BSD_2_clause
-  summary: Flexible and comprehensive R toolbox for model-based optimization ('MBO'), also known as Bayesian optimization. It implements the Efficient Global Optimization
-    Algorithm and is designed for both single- and multi- objective optimization with mixed continuous, categorical and conditional parameters. The machine learning
-    toolbox 'mlr' provide dozens of regression learners to model the performance of the target algorithm with respect to the parameter settings. It provides many
-    different infill criteria to guide the search process. Additional features include multi-point batch proposal, parallel execution as well as visualization and
-    sophisticated logging mechanisms, which is especially useful for teaching and understanding of algorithm behavior. 'mlrMBO' is implemented in a modular fashion,
-    such that single components can be easily replaced or adapted by the user for specific use cases.
+  summary: Flexible and comprehensive R toolbox for model-based optimization ('MBO'), also known as Bayesian optimization. It implements the Efficient Global Optimization Algorithm and is designed for both single- and multi- objective optimization with mixed continuous, categorical and conditional parameters. The machine
+    learning toolbox 'mlr' provide dozens of regression learners to model the performance of the target algorithm with respect to the parameter settings. It provides many different infill criteria to guide the search process. Additional features include multi-point batch proposal, parallel execution as well as visualization
+    and sophisticated logging mechanisms, which is especially useful for teaching and understanding of algorithm behavior. 'mlrMBO' is implemented in a modular fashion, such that single components can be easily replaced or adapted by the user for specific use cases.
   license_family: BSD
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause
