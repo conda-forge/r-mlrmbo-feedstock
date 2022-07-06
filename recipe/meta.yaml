@@ -1,4 +1,4 @@
-{% set version = "1.1.5" %}
+{% set version = "1.1.5.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mlrMBO_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mlrMBO/mlrMBO_{{ version }}.tar.gz
-  sha256: 7ab9d108ad06f6c5c480fa4beca69e09ac89bb162ae6c85fe7d6d25c41f359b8
+  sha256: 0cf26e5e9b180d15b932541cf081a552703a60edf762aafca9933c24ea91dc99
 
 build:
   merge_build_host: true  # [win]
   skip: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
